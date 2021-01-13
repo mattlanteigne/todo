@@ -1,13 +1,13 @@
 import './App.css';
 
-import AddItem from './components/AddItem';
+import List from './components/List';
 
 function App() {
   return (
     <div>
       <h1>TODO</h1>
       <div className="container">
-        <AddItem />
+        <List />
       </div>
     </div>
   );

@@ -1,37 +1,97 @@
-.container {
-  width: 95%;
-  margin: 2% auto;
-}
-
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1px) {
   .container {
-    width: 70%;
+    width: 85%;
     margin: 2% auto;
     border: 1px solid purple;
+    overflow: hidden;
     padding: 1%;
+    border-radius: 8px;
   }
-}
 
-
-@media only screen and (min-width: 1000px) {
-  .container {
-    width: 60%;
-    margin: 2% auto;
-    border: 1px solid purple;
-    padding: 1%;
+  .todoList {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .completedList {
+    width: 90%;
+    margin: auto;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .container {
-    width: 50%;
-    margin: 2% auto;
-    border: 1px solid purple;
-    padding: 1%;
+  .todoList {
+    width: 40%;
+    float: left;
+    margin-left: 5%;
   }
+  
+  .completedList {
+    width: 40%;
+    float: right;
+    margin-right: 5%;
+  }
+
+
 }
 
 h1 {
   text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.inputField {
+  border: 2px solid purple;
+  width: 300px;
+  height: 25px;
+}
+
+.submitButton {
+  margin-left: 10px;
+  width: 75px;
+  height: 30px;
+  background-color: pink;
+  border: 2px solid black;
+}
+
+.listItem {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px dotted red;
+  overflow: hidden;
+}
+
+.completeItem {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px dotted green;
+  overflow: hidden;
+}
+
+
+.completeButton {
+  float: right;
+  margin-left: 10px;
+}
+
+.removeButton {
+  float: right;
+  margin-left: 10px;
+}
+
+.reverseButton {
+  float: right;
+  margin-left: 10px;
 }

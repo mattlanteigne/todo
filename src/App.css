@@ -32,7 +32,6 @@
     margin-right: 5%;
   }
 
-
 }
 
 h1 {
@@ -48,50 +47,58 @@ h3 {
 }
 
 form {
-  text-align: center;
   margin-bottom: 50px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputField {
   border: 2px solid purple;
   width: 300px;
-  height: 25px;
+  height: 35px;
 }
 
 .submitButton {
-  margin-left: 10px;
-  width: 75px;
-  height: 30px;
-  background-color: pink;
-  border: 2px solid black;
+  margin-left: 25px;
 }
 
 .listItem {
+  width: 100%;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px dotted red;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .completeItem {
+  width: 100%;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px dotted green;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
+.item {
+  margin-right: 5px;
+}
 
 .completeButton {
-  float: right;
-  margin-left: 10px;
+  margin-left: auto;
+  order: 2;
 }
 
 .removeButton {
-  float: right;
   margin-left: 10px;
+  order: 2;
 }
 
 .reverseButton {
-  float: right;
-  margin-left: 10px;
+  margin-left: auto;
+  order: 2;
 }

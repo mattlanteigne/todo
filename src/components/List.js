@@ -77,36 +77,38 @@ class List extends React.Component {
     render() {
         return(
             <div>
-                <p className="intro">Welcome to my Todo List! To start, add an item to the list below.</p>
+                <p className="intro">Welcome to my Todo List! To start, enter an item below.</p>
                 <form onSubmit={ this.handleSubmit }>
                     <input type="text" value={this.state.item} onChange={ this.handleChange } className="inputField" /> 
-                    <input type="submit" className="submitButton" />
+                    <input type="submit" className="submitButton btn btn-outline-primary" />
                 </form>
 
                 <div className="todoList">
                     <h3>Todo</h3>
-
                     {
                     this.state.list.map(
                     i => 
                     <div className="listItem">
-                        {i}
-                        <button value = {i} onClick={ this.handleRemoveTodo } className="removeButton">Remove</button>
-                        <button value = {i} onClick={ this.handleComplete } className="completeButton">Complete</button>
+                        <div className="item">
+                            {i}
+                        </div>
+                        <button value = {i} onClick={ this.handleComplete } className="completeButton btn btn-outline-success">Complete</button>
+                        <button value = {i} onClick={ this.handleRemoveTodo } className="removeButton btn btn-outline-danger">Remove</button>                        
                     </div>
                     ) }
                 </div>
 
                 <div className="completedList">
                     <h3>Completed</h3>
-
                     {
                     this.state.completed.map(
                     i => 
                         <div className="completeItem">
-                            {i}
-                            <button value = {i} onClick= { this. handleRemoveCompleted } className="removeButton">Remove</button>
-                            <button value = {i} onClick= { this.handleReverse } className="reverseButton">Add Todo</button>
+                            <div className="item">
+                                {i}
+                            </div>
+                            <button value = {i} onClick= { this.handleReverse } className="reverseButton btn btn-outline-secondary">Reverse</button>
+                            <button value = {i} onClick= { this.handleRemoveCompleted } className="removeButton btn btn-outline-danger">Remove</button>                   
                         </div>
                     ) 
                     }

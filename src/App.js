@@ -6,7 +6,7 @@ import List from './components/List';
 function App() {
   return (
     <div>
-      <h1>TODO</h1>
+      <h1 className="title">TODO</h1>
       <div className="container">
         <List />
       </div>

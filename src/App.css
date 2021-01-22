@@ -59,6 +59,7 @@ form {
   border: 2px solid #007bff;
   width: 300px;
   height: 35px;
+  border-radius: 4px;
 }
 
 .submitButton {

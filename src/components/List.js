@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TransitionGroup from 'react-transition-group/TransitionGroup';
+import Lightspeed from 'react-reveal/LightSpeed';
 
 class List extends React.Component {
      
@@ -82,27 +84,28 @@ class List extends React.Component {
                     <input type="text" value={this.state.item} onChange={ this.handleChange } className="inputField" /> 
                     <input type="submit" className="submitButton btn btn-outline-primary" />
                 </form>
-
                 <div className="todoList">
                     <h3>Todo</h3>
                     {
                     this.state.list.map(
                     i => 
-                    <div className="listItem">
+                    <Lightspeed left>
+                        <div className="listItem">
                         <div className="item">
-                            {i}
+                                {i}
+                            </div>
+                            <button value = {i} onClick={ this.handleComplete } className="completeButton btn btn-outline-success">Complete</button>
+                            <button value = {i} onClick={ this.handleRemoveTodo } className="removeButton btn btn-outline-danger">Remove</button>                        
                         </div>
-                        <button value = {i} onClick={ this.handleComplete } className="completeButton btn btn-outline-success">Complete</button>
-                        <button value = {i} onClick={ this.handleRemoveTodo } className="removeButton btn btn-outline-danger">Remove</button>                        
-                    </div>
+                    </Lightspeed>
                     ) }
                 </div>
-
                 <div className="completedList">
                     <h3>Completed</h3>
                     {
                     this.state.completed.map(
                     i => 
+                    <Lightspeed right>
                         <div className="completeItem">
                             <div className="item">
                                 {i}
@@ -110,8 +113,8 @@ class List extends React.Component {
                             <button value = {i} onClick= { this.handleReverse } className="reverseButton btn btn-outline-secondary">Reverse</button>
                             <button value = {i} onClick= { this.handleRemoveCompleted } className="removeButton btn btn-outline-danger">Remove</button>                   
                         </div>
-                    ) 
-                    }
+                    </Lightspeed>
+                    ) }
                 </div>
             </div>
         );
